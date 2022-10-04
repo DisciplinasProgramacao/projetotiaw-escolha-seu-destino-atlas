@@ -4,16 +4,16 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Alunos integrantes da equipe
 
-Antonio Carlos Pereira da Costa Souza
-Camille Irias Gonçalves
-Daniel Felippe Araujo de Carvalho
-Daniel Almeida Lopes
-Matheus Henrique Fernandes
+* Antonio Carlos Pereira da Costa Souza.
+* Camille Irias Gonçalves.
+* Daniel Felippe Araujo de Carvalho.
+* Daniel Almeida Lopes.
+* Matheus Henrique Fernandes.
 
 ## Professores responsáveis
 
-João Caram Santos de Oliveira
-Lucas Gabriel da Silva Felix
+* João Caram Santos de Oliveira.
+* Lucas Gabriel da Silva Felix.
 
 ## Quadro de tarefas
 Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.

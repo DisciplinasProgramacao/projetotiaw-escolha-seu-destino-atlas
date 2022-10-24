@@ -195,6 +195,11 @@ nav > a:hover {
     color: #fff;
 }
 
+#joao{
+    background-color: pink;
+    color: black;
+
+}
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;

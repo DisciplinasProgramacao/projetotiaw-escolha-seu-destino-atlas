@@ -1,64 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-UA-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/icon.webp">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-</head>
-
-<body>
-
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/icon.webp">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
 
-        <div class="container">
-            <div class="form-image">
-                <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+    <body>
+        <head>
+        
+            <div class="container">
+                <div class="form-image">
+                    <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+                </div>
+                <div class="form">
+                    <form action="#">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Login</h1>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="firstname">Usuário ou E-mail</label>
+                                <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="password">Senha</label>
+                                <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            </div> 
+                        </div>
+                        <a href="#"class="recuperar_senha">Esqueci minha senha</a>
+                        <div class="continue-button">
+                            <button><a href="#">Continuar</a> </button>
+                        </div>
+                    </div>
+                </div>
+                    </form>
+                </div>
             </div>
-            <div class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h1>Login</h1>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="firstname">Usuário ou E-mail</label>
-                            <input type="text" placeholder="Login" id="login">
-
-                        </div>
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input type="password" placeholder="Senha" id="senha">
-                        </div>
-                    </div>
-                    <script>
-                        function logar() {
-                            var login = document.getElementById('login').value;
-                            var senha = document.getElementById('senha').value;
-
-                            if (login == "admin" && senha == "admin") {
-                                alert('Sucesso');
-                                location.href = "jogar.html";
-                            }
-                            else {
-                                alert('Usuário ou Senha Invalido')
-                            }
-                        }
-                    </script>
-                    <a href="#" class="recuperar_senha">Esqueci minha senha</a>
-                    <div class="continue-button">
-                        <button type="submit" onclick="logar(); return false"><a href="#">Continuar</a> </button>
-                    </div>
-            </div>
-        </div>
-        </form>
-        </div>
-        </div>
-</body>
-
+    </body>
 </html>

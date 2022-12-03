@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
-
 <body>
 
     <head>
@@ -23,42 +22,30 @@
                     <div class="form-header">
                         <div class="title">
                             <h1>Login</h1>
+                            <div id='msgError'></div>
                         </div>
                     </div>
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="firstname">Usuário ou E-mail</label>
-                            <input type="text" placeholder="Login" id="login">
+                            <label id="firstnameLabel"for="firstname">Usuário ou E-mail</label>
+                            <input id="login" type="text" placeholder="Login">
 
                         </div>
                         <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input type="password" placeholder="Senha" id="senha">
+                            <label id="passwordLabel"for="password">Senha</label>
+                            <input id="senha" type="password" placeholder="Senha" >
                         </div>
                     </div>
-                    <script>
-                        function logar() {
-                            var login = document.getElementById('login').value;
-                            var senha = document.getElementById('senha').value;
-
-                            if (login == "admin" && senha == "admin") {
-                                alert('Sucesso');
-                                location.href = "jogar.html";
-                            }
-                            else {
-                                alert('Usuário ou Senha Invalido')
-                            }
-                        }
-                    </script>
                     <a href="#" class="recuperar_senha">Esqueci minha senha</a>
                     <div class="continue-button">
-                        <button type="submit" onclick="logar(); return false"><a href="#">Continuar</a> </button>
+                        <button type="submit" onclick= 'entrar()'><a href="#">Continuar</a> </button>
                     </div>
             </div>
         </div>
         </form>
         </div>
         </div>
+        <script src="cadastroLogin.js"></script>
 </body>
 
 </html>

@@ -232,4 +232,25 @@ nav > a:hover {
     .gender-input {
         margin-top: 0.5rem;
     }
+      
 }
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    font-size:x-small
+  }
+  
+  #msgSuccess{
+    text-align: center;
+    color: #00bb00;
+    background-color: #bbffbe;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    font-size: x-small;
+    
+  }

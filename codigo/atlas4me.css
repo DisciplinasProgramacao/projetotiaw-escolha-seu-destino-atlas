@@ -22,8 +22,6 @@ section>h2 {
     padding: 30px;
     width: 30%;
 }
-
-
 header {
     background-color: #00ffff;
     min-height: 10px;
@@ -49,7 +47,7 @@ nav>a:hover {
 img {
     border: 0;
 }
-.button,.button2 {
+.button {
     margin-left: 5%;
     padding: 10px 25px;
     font-size: 24px;
@@ -65,15 +63,10 @@ img {
     box-shadow: 0 9px #396fa1;
     width: 20%;
 }
-
-.button2{
-    margin-top: 120px;
-}
-
-.button:hover,.button2:hover{
+.button:hover {
     background-color: #00ffff
 }
-.button:active,.button2:active {
+.button:active {
     background-color: #00ffff;
     box-shadow: 0 5px #00ffff;
     transform: translateY(4px);

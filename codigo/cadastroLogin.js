@@ -1,4 +1,3 @@
-
 let firtsname = document.querySelector('#firstname')
 let labelFirstname = document.querySelector('#labelFirstname')
 let validFirstname = false
@@ -22,6 +21,10 @@ let validPassword = false
 let confirmPassword = document.querySelector('#confirmPassword')
 let labelConfirmPassword = document.querySelector('#labelConfirmPassword')
 let validConfirmPassword = false
+
+let country = document.querySelector('#country')
+let labelCountry = document.querySelector('#labelCountry')
+let validCountry = false
 
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
@@ -90,8 +93,20 @@ confirmPassword.addEventListener('keyup', () => {
     }
 })
 
+country.addEventListener('keyup', () => {
+    if (country.value.length <= 2) {
+        labelCountry.setAttribute('Style', 'color: red')
+        labelCountry.innerHTML = '<strong>País * Insira no minimo 3 caracteres</strong>'
+        validCountry = false
+    } else {
+        labelCountry.setAttribute('Style', 'color: green')
+        labelCountry.innerHTML = '<strong>País</strong>'
+        validCountry = true
+    }
+})
+
 function cadastrar() {
-   if(validFirstname && validUser && validNumber && validPassword && validConfirmPassword){
+   if(validFirstname && validUser && validNumber && validPassword && validConfirmPassword && validCountry){
    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
    listaUser.push(
@@ -100,7 +115,8 @@ function cadastrar() {
         userCadastrado: user.value,
         numeroCadastrado: number.value,
         senhaCadastrada: password.value,
-        emailCadastrado: email.value
+        emailCadastrado: email.value,
+        countryCadastrado: country.value
     }
    )
    localStorage.setItem('listaUser', JSON.stringify(listaUser))
@@ -113,7 +129,7 @@ function cadastrar() {
    
     setTimeout(()=>{
         window.location.href = 'http://127.0.0.1:5500/login.html'
-    }, 000)
+    }, 2000)
    } else {
     msgError.setAttribute('Style' , 'display: block')
     msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
@@ -138,7 +154,8 @@ function entrar(){
     user: '',
     password: '',
     number: '',
-    email: ''
+    email: '',
+    country: ''
    }
 
    listaUser = JSON.parse(localStorage.getItem('listaUser'))
@@ -151,13 +168,19 @@ function entrar(){
             user: item.userCadastrado,
             password: item.senhaCadastrada,
             number: item.numeroCadastrado,
-            email: item.emailCadastrado
+            email: item.emailCadastrado,
+            country: item.countryCadastrado
         }
     } 
    })
 
    if(login.value == userValid.user && senha.value == userValid.password){
      window.location.href = 'http://127.0.0.1:5500/perfil.html'
+
+     localStorage.setItem('userLogado', JSON.stringify(userValid))
+     localStorage.setItem('emailLogado', JSON.stringify(userValid))
+     localStorage.setItem('numberLogado', JSON.stringify(userValid))
+     localStorage.setItem('countryLogado', JSON.stringify(userValid))
    }else{
     alert('senha ou usuário invalido')
     login.focus()

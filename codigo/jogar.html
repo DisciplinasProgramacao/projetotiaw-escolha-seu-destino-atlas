@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="atlas4me.css" media="screen" />
-    <script src="js/jogo.js"></script>
+    <script type="module" src="js/jogo.js"></script>
     <link rel="icon" href="./img/icon.webp">
     <title>Atlas4Me</title>
 </head>
@@ -26,11 +26,13 @@
         </div>
     </header>
     <section>
-        <h3 id="mensagem"><span>A maior parte do território do seu país fica no Hemísferio Norte?</span></h3>
+        <h3 class="pergunta"><span></span></h3>
         <br> <br>
-        <div class="botoes">
-        <button onclick="yes()" class="button2" id="sim">SIM</button>
-        <button onclick="no()" class="button2" id="nao">NÃO</button>
+        <div class="answers">
+        </div>
+        <div class = "reiniciar">
+            <span></span>
+            <button class="button2">Jogar Novamente</button>
         </div>
     </section>
 </body>

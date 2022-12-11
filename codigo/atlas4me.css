@@ -49,7 +49,7 @@ nav>a:hover {
 img {
     border: 0;
 }
-.button,.button2 {
+.button,.answers,.button2{
     margin-left: 5%;
     padding: 10px 25px;
     font-size: 24px;
@@ -67,13 +67,17 @@ img {
 }
 
 .button2{
-    margin-top: 120px;
+    display:none;
 }
 
-.button:hover,.button2:hover{
+.answers{
+    margin-top: 50px;
+}
+
+.button:hover,.answers:hover,.button2:hover{
     background-color: #00ffff
 }
-.button:active,.button2:active {
+.button:active,.answers:active,.button2:active{
     background-color: #00ffff;
     box-shadow: 0 5px #00ffff;
     transform: translateY(4px);

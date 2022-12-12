@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps.css'/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="atlas4me.css" media="screen" />
     <link rel="icon" href="./img/icon.webp">
     <title>Perfil</title>
@@ -59,16 +59,21 @@
             </ul>
         </div>
     </div>
-    <div id="map" class="map">
-        <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps-web.min.js'></script>
-        <script>
-            tt.setProductInfo('Map World', '6.21.3');
-            tt.map({
-                key: 'uD7tm0dKGmmhGHAOA5PPw4TpkjfmYdZm',
-                container: 'map'
-            });
-          </script>
-    </div>
+    <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCN4wcrPa2grl6Wzsk-koxse-CTviCyNY&callback=initMap">
+
+        let map;
+        
+        function initMap(position) {
+        map = new google.maps.Map(document.getElementById("map"), {
+        center: {position},
+        zoom: 8,
+    });
+    }
+
+    window.initMap = initMap;
+    </script>
 </section>
 <script src="perfil.js"></script>
 </body>

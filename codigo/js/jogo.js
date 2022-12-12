@@ -7,49 +7,23 @@ const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".finish button");
 
 import questions from "./questions.js";
+// import paises from "./paises.js";
 
-[
-  {
-    "Brasil":"FFFFFTFTFF"
-  },
-  { 
-    "Suriname":"TTFFTFFTFF"
-  },
-  { 
-    "Guiana":"TTFTFFFTFF"
-  },
-  { 
-    "Venezuela":"TTFFFFFTFF"
-  },
-  {
-    "Colombia":"TTTFFFFTFF"
-  },
-  {
-    "Equador":"FFFFFTFTFT"    
-  },
-  {
-    "Peru":"FTFFFFFTFF"
-  },
-  {
-    "Bolivia":"FTFFFFFFTF"
-  },
-  {
-    "Paraguai":"FTFFFFFFFF"
-  },
-  {
-    "Chile":"FFFFFFFTFF"
-  },
-  {
-    "Argentina":"FTFFFTFTFF"
-  },
-  {
-    "Uruguai":"FTFFFTTTFF"
-  }
-]
-
+var arrayBr = ["F","F","F","F","F","V","F","V","F","F"];
+var arraySu = ["V","V","F","F","V","F","F","V","F","F"];
+var arrayGui = ["V","V","F","V","F","F","F","V","F","F"];
+var arrayVe = ["V","V","F","F","F","F","F","V","F","F"];
+var arrayCo = ["V","V","V","F","F","F","F","V","F","F"];
+var arrayEq = ["F","F","F","F","F","V","F","V","F","V"];
+var arrayPe = ["F","V","F","F","F","F","F","V","F","F"];
+var arrayBo = ["F","V","F","F","F","F","F","F","V","F"];
+var arrayPa = ["F","V","F","F","F","F","F","F","F","F"];
+var arrayChi = ["F","F","F","F","F","F","F","V","F","F"];
+var arrayArg = ["F","V","F","F","F","V","F","V","F","F"];
+var arrayUru = ["F","V","F","F","F","V","V","V","F","F"];
 
 let currentIndex = 0;
-var arrayResp = new Array ();
+var arrayResp = new Array();
 
 btnRestart.onclick = () => {
   content.style.display = "flex";
@@ -60,46 +34,57 @@ btnRestart.onclick = () => {
   loadQuestion();
 };
 
-function verificaPais(arrayResp){
+function verificaArray(arrayResp,arrayComp){
   var result;
-  for(var i=0; i<arrayResp; i++){
-      if(arrayResp[i] === Brasil[i]){
+  for(var i=0; i<arrayResp.length; i++){
+      if(arrayResp[i] !== arrayComp[i]){
+        return false;
+      }
+  }
+  return true;
+}
+
+function verificaPais(arrayResp){
+    var result;
+  
+      if(verificaArray(arrayResp,arrayBr)){
         result = "Brasil";
-      }else if(arrayResp[i] === Suriname[i]){
+      }else if(verificaArray(arrayResp,arraySu)){
         result = "Suriname";
-      }else if(arrayResp[i] === Guiana[i]){
+      }else if(verificaArray(arrayResp,arrayGui)){
         result = "Guiana";
-      }else if(arrayResp[i] === Venezuela[i]){
+      }else if(verificaArray(arrayResp,arrayVe)){
         result = "Venezuela";
-      }else if(arrayResp[i] === Colombia[i]){
+      }else if(verificaArray(arrayResp,arrayCo)){
         result = "Colômbia";
-      }else if(arrayResp[i] === Equador[i]){
+      }else if(verificaArray(arrayResp,arrayEq)){
         result = "Equador"; 
-      }else if(arrayResp[i] === Peru[i]){
+      }else if(verificaArray(arrayResp,arrayPe)){
         result = "Peru";
-      }else if(arrayResp[i] === Bolivia[i]){
+      }else if(verificaArray(arrayResp,arrayBo)){
         result = "Bolívia";
-      }else if(arrayResp[i] === Paraguai[i]){
+      }else if(verificaArray(arrayResp,arrayPa)){
         result = "Paraguai";
-      }else if(arrayResp[i] === Chile[i]){
+      }else if(verificaArray(arrayResp,arrayChi)){
         result = "Chile";  
-      }else if(arrayResp[i] === Argentina[i]){
+      }else if(verificaArray(arrayResp,arrayArg)){
         result = "Argentina";  
-      }else if(arrayResp[i] === Uruguai[i]){
+      }else if(verificaArray(arrayResp,arrayUru)){
         result = "Uruguai"  
       }else{
         result = " não foi encontrado";
       }
-  }
+      return result;
+
 }
 
-var pais = verificaPais(arrayResp);
 
-function nextQuestion(e,arrayResp) {
+
+function nextQuestion(e) {
   if (e.target.getAttribute("data-correct") === "true") {
-    arrayResp = true;
+    arrayResp[currentIndex]= "V";
   }else{
-    arrayResp = false;
+    arrayResp[currentIndex] = "F";
   }
 
   if (currentIndex < questions.length - 1) {
@@ -111,6 +96,7 @@ function nextQuestion(e,arrayResp) {
 }
 
 function finish() {
+  var pais = verificaPais(arrayResp);
   textFinish.innerHTML = `O país que você pensou é ${pais}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";

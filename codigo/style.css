@@ -8,7 +8,6 @@
 body {
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: #000000;
@@ -17,7 +16,7 @@ header {
     background-color: #00ffff;
     min-height: 10px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 5px;
     box-shadow: 0 1px 9px #396fa1
 }
 
@@ -42,6 +41,8 @@ nav > a:hover {
 .container {
     width: 75%;
     height: 85vh;
+    margin-left: 130px;
+    justify-content: center;
     display: flex;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.212);
 }

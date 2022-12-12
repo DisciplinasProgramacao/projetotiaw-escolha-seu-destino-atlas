@@ -17,12 +17,16 @@ header {
     background-color: #00ffff;
     min-height: 10px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     box-shadow: 0 1px 9px #396fa1
-    
 }
+
+.inner{
+    top: 0;
+}
+
 nav {
-    padding: 20px;
+    padding:0 auto;
 }
 nav > a {
     color : #396fa1;
@@ -36,10 +40,10 @@ nav > a:hover {
     color: #00ffff;
 }
 .container {
-    width: 80%;
-    height: 93vh;
+    width: 75%;
+    height: 85vh;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.212);
 }
 .form-image {
     width: 50%;
@@ -50,7 +54,7 @@ nav > a:hover {
     padding: 1rem;
 }
 .form-image img {
-    width: 31rem;
+    width: 28rem;
 }
 .form {
     width: 50%;
@@ -62,7 +66,7 @@ nav > a:hover {
     padding: 3rem;
 }
 .form-header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -104,15 +108,15 @@ nav > a:hover {
 .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 .input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
+    margin: 0.5rem 0;
+    padding: 0.4rem 1rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 1px 1px 6px #0000001c;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .input-box input:hover {
     background-color: #eeeeee75;
@@ -191,11 +195,7 @@ nav > a:hover {
     cursor: pointer;
     border: none;  
 }
-#joao{
-    background-color: pink;
-    color: black;
 
-}
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;

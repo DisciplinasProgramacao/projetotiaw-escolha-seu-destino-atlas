@@ -9,9 +9,10 @@ body {
     margin: 0;
     background-image: url(./img/backgroundBody.gif);
     background-repeat: no-repeat;
-    background-position: 100% -100%;
+    background-position: 100% -25%;
     background-color: rgb(0, 0, 0);
 }
+
 section {
     color: rgb(231, 231, 231);
 }
@@ -23,12 +24,23 @@ section>h2 {
     width: 30%;
 }
 
+h3, .finish{
+    font-size: 25px;
+    align-items: center;
+    text-align: left;
+    padding: 30px;
+    width: 30%;
+}
+
+.spnQtd{
+    font-size: 15px;
+}
 
 header {
     background-color: #00ffff;
     min-height: 10px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
     box-shadow: 0 1px 9px #396fa1
 }
 nav {
@@ -49,7 +61,7 @@ nav>a:hover {
 img {
     border: 0;
 }
-.button,.answers,.button2{
+.button,.answer,.button2{
     margin-left: 5%;
     padding: 10px 25px;
     font-size: 24px;
@@ -70,14 +82,16 @@ img {
     display:none;
 }
 
-.answers{
-    margin-top: 50px;
+.answer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
 }
 
-.button:hover,.answers:hover,.button2:hover{
+.button:hover,.answer:hover,.button2:hover{
     background-color: #00ffff
 }
-.button:active,.answers:active,.button2:active{
+.button:active,.answer:active,.button2:active{
     background-color: #00ffff;
     box-shadow: 0 5px #00ffff;
     transform: translateY(4px);

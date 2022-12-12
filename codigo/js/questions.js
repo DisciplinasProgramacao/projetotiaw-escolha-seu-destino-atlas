@@ -1,7 +1,7 @@
 export default[
     {
-        question:"Seu país tem a maior parte do território no Hesmifério Norte?",
-        answer:[
+        question: "Seu país tem a maior parte do território no Hesmifério Norte?",
+        answers: [
             {option: "SIM", correct:true},
             {option: "NÃO", correct:false},
         ],

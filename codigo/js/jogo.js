@@ -7,20 +7,46 @@ const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".finish button");
 
 import questions from "./questions.js";
-// import paises from "./paises.js";
 
-var arrayBr = ["F","F","F","F","F","V","F","V","F","F"];
-var arraySu = ["V","V","F","F","V","F","F","V","F","F"];
-var arrayGui = ["V","V","F","V","F","F","F","V","F","F"];
-var arrayVe = ["V","V","F","F","F","F","F","V","F","F"];
-var arrayCo = ["V","V","V","F","F","F","F","V","F","F"];
-var arrayEq = ["F","F","F","F","F","V","F","V","F","V"];
-var arrayPe = ["F","V","F","F","F","F","F","V","F","F"];
-var arrayBo = ["F","V","F","F","F","F","F","F","V","F"];
-var arrayPa = ["F","V","F","F","F","F","F","F","F","F"];
-var arrayChi = ["F","F","F","F","F","F","F","V","F","F"];
-var arrayArg = ["F","V","F","F","F","V","F","V","F","F"];
-var arrayUru = ["F","V","F","F","F","V","V","V","F","F"];
+[
+  {
+    "Brasil":"FFFFFTFTFF"
+  },
+  { 
+    "Suriname":"TTFFTFFTFF"
+  },
+  { 
+    "Guiana":"TTFTFFFTFF"
+  },
+  { 
+    "Venezuela":"TTFFFFFTFF"
+  },
+  {
+    "Colombia":"TTTFFFFTFF"
+  },
+  {
+    "Equador":"FFFFFTFTFT"    
+  },
+  {
+    "Peru":"FTFFFFFTFF"
+  },
+  {
+    "Bolivia":"FTFFFFFFTF"
+  },
+  {
+    "Paraguai":"FTFFFFFFFF"
+  },
+  {
+    "Chile":"FFFFFFFTFF"
+  },
+  {
+    "Argentina":"FTFFFTFTFF"
+  },
+  {
+    "Uruguai":"FTFFFTTTFF"
+  }
+]
+
 
 let currentIndex = 0;
 var arrayResp = new Array ();
@@ -37,29 +63,29 @@ btnRestart.onclick = () => {
 function verificaPais(arrayResp){
   var result;
   for(var i=0; i<arrayResp; i++){
-      if(arrayResp[i] === arrayBr[i]){
+      if(arrayResp[i] === Brasil[i]){
         result = "Brasil";
-      }else if(arrayResp[i] === arraySu[i]){
+      }else if(arrayResp[i] === Suriname[i]){
         result = "Suriname";
-      }else if(arrayResp[i] === arrayGui[i]){
+      }else if(arrayResp[i] === Guiana[i]){
         result = "Guiana";
-      }else if(arrayResp[i] === arrayVe[i]){
+      }else if(arrayResp[i] === Venezuela[i]){
         result = "Venezuela";
-      }else if(arrayResp[i] === arrayCo[i]){
+      }else if(arrayResp[i] === Colombia[i]){
         result = "Colômbia";
-      }else if(arrayResp[i] === arrayEq[i]){
+      }else if(arrayResp[i] === Equador[i]){
         result = "Equador"; 
-      }else if(arrayResp[i] === arrayPe[i]){
+      }else if(arrayResp[i] === Peru[i]){
         result = "Peru";
-      }else if(arrayResp[i] === arrayBo[i]){
+      }else if(arrayResp[i] === Bolivia[i]){
         result = "Bolívia";
-      }else if(arrayResp[i] === arrayPa[i]){
+      }else if(arrayResp[i] === Paraguai[i]){
         result = "Paraguai";
-      }else if(arrayResp[i] === arrayChi[i]){
+      }else if(arrayResp[i] === Chile[i]){
         result = "Chile";  
-      }else if(arrayResp[i] === arrayArg[i]){
+      }else if(arrayResp[i] === Argentina[i]){
         result = "Argentina";  
-      }else if(arrayResp[i] === arrayUru[i]){
+      }else if(arrayResp[i] === Uruguai[i]){
         result = "Uruguai"  
       }else{
         result = " não foi encontrado";
@@ -71,9 +97,9 @@ var pais = verificaPais(arrayResp);
 
 function nextQuestion(e,arrayResp) {
   if (e.target.getAttribute("data-correct") === "true") {
-    arrayResp = "V";
+    arrayResp = true;
   }else{
-    arrayResp = "F";
+    arrayResp = false;
   }
 
   if (currentIndex < questions.length - 1) {

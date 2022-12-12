@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps.css'/>
     <link rel="stylesheet" type="text/css" href="atlas4me.css" media="screen" />
     <link rel="icon" href="./img/icon.webp">
     <title>Perfil</title>
     
 </head>
 <body>
+    <script>
+        if('geolocation' in navigator){
+            const watcher = navigator.geolocation.watchPosition(function(position){
+                console.log(position)
+            },function(error){
+                console.log(error)
+            },{ enableHighAccuracy: true, maximumAge: 3000, timeout: 3000})
+        }else{
+            alert('Não foi possível pegar sua localização')
+        }
+    </script>
     <header>
         <div class="inner">
             <div class="logo"><img src="./img/thumbnail_logooriginal.png"></div>
@@ -46,6 +58,16 @@
                 <li id="number"><i id="number" class="icono fas fa-share-alt"></i></li>
             </ul>
         </div>
+    </div>
+    <div id="map" class="map">
+        <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.21.3/maps/maps-web.min.js'></script>
+        <script>
+            tt.setProductInfo('Map World', '6.21.3');
+            tt.map({
+                key: 'uD7tm0dKGmmhGHAOA5PPw4TpkjfmYdZm',
+                container: 'map'
+            });
+          </script>
     </div>
 </section>
 <script src="perfil.js"></script>

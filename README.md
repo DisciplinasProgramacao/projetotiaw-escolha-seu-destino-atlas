@@ -2,6 +2,18 @@
 # Atlas4Me
 Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 - Desenvolver um jogo capaz de adivinhar o País que o condutor esta pensando.
+
+# Requisitos cumpridos: 90/100
+  - api parcial
+  
+## Comentários da correção
+
+Depois dos problemas e do atraso, o trabalho finalizou bem. Parabéns pelo que vocês conseguiram.
+
+Olhei o código do mapa: vi que ele não está funcionando por achar que o initMap está errado, porém não tive tempo de olhar o erro.
+
+A nota é individual baseada na inspeção dos commits e do kanban.
+
 ## Alunos integrantes da equipe
 
 * Antonio Carlos Pereira da Costa Souza.

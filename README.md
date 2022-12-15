@@ -5,7 +5,11 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 # Requisitos cumpridos: 90/100
   - api parcial
-  
+
+# Nota de apresentação 85/100
+
+**Importante:** A nota-base do grupo é calculada a partir das porcentagens acima. A nota individual leva em consideração ainda a nota de acompanhamento nas reuniões de grupos, a participação efetiva nas tarefas e commits e os descontos por falta nas reuniões. 
+
 ## Comentários da correção
 
 Depois dos problemas e do atraso, o trabalho finalizou bem. Parabéns pelo que vocês conseguiram.
